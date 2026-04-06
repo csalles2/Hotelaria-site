@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 30% 97%;
+    --foreground: 25 20% 12%;
+
+    --card: 35 25% 95%;
+    --card-foreground: 25 20% 12%;
+
+    --popover: 35 30% 97%;
+    --popover-foreground: 25 20% 12%;
+
+    --primary: 28 60% 38%;
+    --primary-foreground: 35 30% 97%;
+
+    --secondary: 35 20% 90%;
+    --secondary-foreground: 25 20% 20%;
+
+    --muted: 35 15% 92%;
+    --muted-foreground: 25 10% 45%;
+
+    --accent: 160 30% 35%;
+    --accent-foreground: 35 30% 97%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 35 30% 97%;
+
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 28 60% 38%;
+
+    --radius: 0.5rem;
+
+    --gold: 42 75% 55%;
+    --gold-foreground: 25 20% 12%;
+    --warm-dark: 25 25% 15%;
+    --warm-dark-foreground: 35 25% 92%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Source Sans 3', sans-serif;
+
+    --shadow-warm: 0 4px 30px hsl(28 60% 38% / 0.08);
+    --shadow-elevated: 0 12px 40px hsl(25 20% 12% / 0.12);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
